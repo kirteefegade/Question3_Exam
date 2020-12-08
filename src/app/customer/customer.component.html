@@ -1,0 +1,31 @@
+<div class="row">
+    <div class="mycol">
+        <h4>{{flag1}}</h4>
+       <cust-list [cust]="cust"
+                    (showViewEvent)="showCustomer($event)"
+                    (editCustEvent)=" updateCustomer($event)"
+                    (deleteCustEvent)="deleteCustomer($event)"
+               
+        >
+
+       </cust-list>
+      <!--<cust-list></cust-list>-->
+        <button type="button" name="btn" (click)="showForm()">Add Customer</button>
+    </div>
+    <div class="mycol">
+        <div *ngIf="flag">
+           <!--  <cust-form (myevent)="flag=$event" [updatecust]="customer"></cust-form> -->
+        </div>
+        
+       <!-- <cust-detail [customer]="selectedCustomer" [flag]="flag1" (closeEvent)="flag1=$event"></cust-detail>-->
+    </div>
+</div>
+<!--
+    <div *ngIf='flag'>
+    
+    <h4>Customer Id: {{selectedCustomer.id}}</h4>
+    <h4>Customer name: {{selectedCustomer.name}}</h4>
+    <h4>Age: {{selectedCustomer.age}}</h4>
+
+</div>
+-->

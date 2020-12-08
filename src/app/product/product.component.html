@@ -1,0 +1,19 @@
+
+<h2>Table by using array</h2>
+<table border="2">
+    <tr>
+        <th>Pid</th>
+        <th>Name</th>
+        <th>Price</th>
+    </tr>
+    <tr *ngFor="let product of parr" >
+        <td>{{product.pid}}</td>
+        <td>{{product.pname}}</td>
+        <td>{{product.price}}</td>
+        <td><button type="submit" name="btn" (click)="showProduct(product)">view</button></td>
+        <td><a (click)="updateProduct(product)">edit</a>/
+            <a>delete</a></td>
+
+    </tr>
+</table><br>
+<button type="submit" name="btn" (click)="showform()">Add product</button>

@@ -1,0 +1,20 @@
+
+<table border="2">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Adhar</th>
+    </tr>
+    <tr *ngFor="let c of cust" >
+        <td>{{c.id}}</td>
+        <td>{{c.name|uppercase}}</td>
+        <td>{{c.age}}</td>
+        <td>{{c.adhar|adhar}}</td>
+        <td><button type="button" name="btn" (click)="showCustomer(c)" >view</button></td>
+        <td>
+            <a (click)="updateCustomer(c)">edit</a>/
+            <a (click)="deleteCustomer(c)">delete</a>
+        </td>
+    </tr>
+</table>

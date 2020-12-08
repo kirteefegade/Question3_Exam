@@ -1,0 +1,18 @@
+<div>
+    <form>
+        <div>
+            CustmerID:-<input type="text" name="id" [(ngModel)]="id"><br>
+        </div>
+       
+        Customer name:- <input type="text" name="name" [(ngModel)]="name"><br>
+        Customer age:- <input type="text" name="age" [(ngModel)]="age"><br>
+        Customer adhar no:- <input type="text" name="adhar" [(ngModel)]="adhar"><br>
+        <div *ngIf="show">
+            <button type="button" name="btn" (click)="addCustomer()">Add customer</button>
+        </div>
+        <div *ngIf="!show">
+            <button type="button" name="btn" (click)="UpdateCustomer()">Edit customer</button>
+        </div>
+        
+    </form>
+</div>
